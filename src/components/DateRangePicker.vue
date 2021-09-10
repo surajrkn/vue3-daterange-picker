@@ -190,8 +190,8 @@
 <script>
   import dateUtilMixin from './dateUtilMixin'
   import Calendar from './Calendar.vue'
-  import CalendarTime from './CalendarTime'
-  import CalendarRanges from './CalendarRanges'
+  import CalendarTime from './CalendarTime.vue'
+  import CalendarRanges from './CalendarRanges.vue'
   import DateUtil from "./date_util/native"
   import appendToBody from '../directives/appendToBody';
 
