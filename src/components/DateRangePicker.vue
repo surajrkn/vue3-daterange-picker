@@ -94,7 +94,7 @@
                           @dateClick="dateClick" @hoverDate="hoverDate"
                           :showWeekNumbers="showWeekNumbers"
                 >
-                  <slot name="date" slot="date-slot" slot-scope="data" v-bind="data"></slot>
+                  <slot name="date" v-bind="data"></slot>
                 </calendar>
               </div>
               <calendar-time v-if="timePicker && start"
@@ -131,7 +131,7 @@
 
                     @param {Date} date - the date being rendered into the table cell
                   -->
-                  <slot name="date" slot="date-slot" slot-scope="data" v-bind="data"></slot>
+                  <slot name="date" v-bind="data"></slot>
                 </calendar>
               </div>
               <calendar-time v-if="timePicker && end"
@@ -192,7 +192,7 @@
   import Calendar from './Calendar.vue'
   import CalendarTime from './CalendarTime'
   import CalendarRanges from './CalendarRanges'
-  import {getDateUtil} from './util'
+  import DateUtil from "./date_util/native"
   import appendToBody from '../directives/appendToBody';
 
   export default {
@@ -453,7 +453,7 @@
     },
     data () {
       //copy locale data object
-      const util = getDateUtil();
+      const util = DateUtil;
       let data = {locale: util.localeData({...this.localeData})}
 
       let startDate = this.dateRange.startDate || null;
@@ -855,7 +855,7 @@
           border-bottom: 1px solid #ddd;
           width: 100%;
 
-          ::v-deep ul {
+          ::v-deep(ul) {
             display: flex;
             flex-wrap: wrap;
             width: auto;
@@ -917,7 +917,7 @@
             flex-basis: auto;
             border-bottom: 0;
 
-            ::v-deep ul {
+            ::v-deep(ul) {
               display: block;
               width: 100%;
             }

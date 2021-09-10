@@ -1,15 +1,15 @@
 {
-  "name": "vue2-daterange-picker",
-  "version": "0.6.5",
-  "description": "Vue2 date range picker based on https://github.com/dangrossman/bootstrap-daterangepicker (no jQuery)",
-  "author": "Nikola Kostadinov <nikolakk@gmail.com>",
-  "main": "dist/vue2-daterange-picker.umd.min.js",
-  "jsnext:main": "dist/vue2-daterange-picker.umd.min.js",
+  "name": "@hnquang/vue3-daterange-picker",
+  "version": "0.1.0",
+  "description": "Modified Vue3 date range picker based on https://github.com/Innologica/vue2-daterange-picker",
+  "author": "Quang Ho <hnquang112@yahoo.com.vn>",
+  "main": "dist/vue3-daterange-picker.umd.min.js",
+  "jsnext:main": "dist/vue3-daterange-picker.umd.min.js",
   "private": false,
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Innologica/vue2-daterange-picker"
+    "url": "https://github.com/hnquang112/vue3-daterange-picker"
   },
   "files": [
     "dist",
@@ -19,7 +19,7 @@
     "components:parse": "node ./docs/.scripts/parse.js",
     "components:watch": "watch \"npm run components:parse\" ./src",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name vue2-daterange-picker ./src/index.js",
+    "lib": "vue-cli-service build --target lib --name vue3-daterange-picker ./src/index.js",
     "docs:dev": "concurrently \"npm run components:watch\" \"vuepress dev docs\"",
     "docs:build": "vuepress build docs",
     "prepublishOnly": "npm run lib",

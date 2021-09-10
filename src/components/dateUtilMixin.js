@@ -1,4 +1,4 @@
-import {getDateUtil} from "./util";
+import DateUtil from "./date_util/native";
 
 export default {
   props: {
@@ -8,6 +8,6 @@ export default {
     },
   },
   created () {
-    this.$dateUtil = getDateUtil('native')
+    this.$dateUtil = DateUtil
   }
 }
