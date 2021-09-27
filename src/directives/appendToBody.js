@@ -4,7 +4,7 @@ export default {
     if (binding.instance.appendToBody) {
       const {height, top, left, width, right} = binding.instance.$refs.toggle.getBoundingClientRect();
 
-      el.unbindPosition = binding.instance.calculatePosition(el, context, {
+      el.unbindPosition = binding.instance.calculatePosition(el, binding.instance, {
         width: width,
         top: (window.scrollY + top + height),
         left: (window.scrollX + left),
@@ -13,7 +13,7 @@ export default {
 
       document.body.appendChild(el);
     } else {
-      context.$el.appendChild(el)
+      binding.instance.$el.appendChild(el)
     }
   },
 
