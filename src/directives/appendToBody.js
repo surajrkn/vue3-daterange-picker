@@ -1,6 +1,5 @@
 export default {
   mounted (el, binding, vnode) {
-    console.log('inserted')
     if (binding.instance.appendToBody) {
       const {height, top, left, width, right} = binding.instance.$refs.toggle.getBoundingClientRect();
 
