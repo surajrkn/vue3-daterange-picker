@@ -1,10 +1,10 @@
 export default {
-  mounted (el, bindings, {context}) {
+  mounted (el, binding, vnode) {
     console.log('inserted')
-    if (context.appendToBody) {
-      const {height, top, left, width, right} = context.$refs.toggle.getBoundingClientRect();
+    if (binding.instance.appendToBody) {
+      const {height, top, left, width, right} = binding.instance.$refs.toggle.getBoundingClientRect();
 
-      el.unbindPosition = context.calculatePosition(el, context, {
+      el.unbindPosition = binding.instance.calculatePosition(el, context, {
         width: width,
         top: (window.scrollY + top + height),
         left: (window.scrollX + left),
@@ -17,8 +17,8 @@ export default {
     }
   },
 
-  unmounted (el, bindings, {context}) {
-    if (context.appendToBody) {
+  unmounted (el, binding, {context}) {
+    if (binding.instance.appendToBody) {
       if (el.unbindPosition && typeof el.unbindPosition === 'function') {
         el.unbindPosition();
       }
