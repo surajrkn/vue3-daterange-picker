@@ -12,7 +12,7 @@ https://innologica.github.io/vue2-daterange-picker/
 
 ``` bash
 # install via npm
-npm i @hnquang/vue3-daterange-picker --save
+npm i vue3-daterange-picker-protracked --save
 ```
 
 ## TODO
