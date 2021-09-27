@@ -1,13 +1,13 @@
 {
   "name": "vue3-daterange-picker-protracked",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Modified Vue3 date range picker based on https://github.com/Innologica/vue2-daterange-picker",
   "author": "Suraj Radhakrishnan <surajmanikuttan@gmail.com>",
   "main": "src/index.js",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/surajrkn/vue3-daterange-picker.git"    
+    "url": "https://github.com/surajrkn/vue3-daterange-picker.git"
   },
   "files": [
     "dist",
