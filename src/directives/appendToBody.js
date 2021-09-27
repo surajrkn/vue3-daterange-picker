@@ -1,5 +1,6 @@
 export default {
-  inserted (el, bindings, {context}) {
+  mounted (el, bindings, {context}) {
+    console.log('inserted')
     if (context.appendToBody) {
       const {height, top, left, width, right} = context.$refs.toggle.getBoundingClientRect();
 
@@ -16,7 +17,7 @@ export default {
     }
   },
 
-  unbind (el, bindings, {context}) {
+  unmounted (el, bindings, {context}) {
     if (context.appendToBody) {
       if (el.unbindPosition && typeof el.unbindPosition === 'function') {
         el.unbindPosition();
